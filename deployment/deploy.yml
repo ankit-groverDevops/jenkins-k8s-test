@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: ${env.namespace}
+  name: nm
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -9,8 +9,7 @@ metadata:
   name: nginx
   labels:
    app: nginx
-  namespace: ${env.namespace}
-
+  namespace: nm
 spec:
  replicas: 1
  selector:
